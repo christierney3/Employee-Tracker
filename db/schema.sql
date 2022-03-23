@@ -24,6 +24,7 @@ CREATE TABLE employee (
     manager_id INT,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
+    full_name VARCHAR(30) AS (CONCAT (first_name, ' ', last_name)),
     FOREIGN KEY (role_id)
     REFERENCES roles(id)
     ON DELETE CASCADE
