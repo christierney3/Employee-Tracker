@@ -4,7 +4,7 @@ const fs = require('fs');
 const connection = require('./config/connection');
 require('console.table');
 
-const {showChoices, findId} = require('./db/queries')
+const {showChoices, findId} = require('./db/queries');
 
 connection.connect((err) => {
     if (err) throw err;
